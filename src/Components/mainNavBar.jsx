@@ -1,18 +1,17 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-
 import style from 'bootstrap/dist/css/bootstrap.css';
-import './Navbar.css';
+import CartIcon from './CardIcon';
 
 class mainNavBar extends React.Component {
     render() {
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">tula-handmade</Navbar.Brand>
+                <Navbar.Brand href="#home">Ariel Suarez</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Instagram</Nav.Link>
+                        <Nav.Link href="https://www.instagram.com/arisuarez_/">Instagram</Nav.Link>
                         <Nav.Link href="#link">Envíos</Nav.Link>
                         <NavDropdown title="Productos" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Individuales</NavDropdown.Item>
@@ -26,6 +25,7 @@ class mainNavBar extends React.Component {
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-success">Search</Button>
                     </Form>
+                    <CartIcon />
                 </Navbar.Collapse>
             </Navbar>
         );

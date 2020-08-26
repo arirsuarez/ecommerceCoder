@@ -37,6 +37,16 @@
   }
 }
 
-.navbar{
-  color: red !important;
+.cart {
+  width: 50px;
+  height: 50px;
+}
+
+p {
+  background-color: #ccc;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px !important;
+  font-weight: bolder;
+  font-size: 50px;
 }
