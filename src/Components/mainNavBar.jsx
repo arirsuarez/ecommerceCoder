@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import style from 'bootstrap/dist/css/bootstrap.css';
-import CartIcon from './CardIcon';
+import CartIcon from './CartIcon';
 
 class mainNavBar extends React.Component {
     render() {
@@ -33,4 +33,4 @@ class mainNavBar extends React.Component {
 }
 
 
-export default mainNavBar
+export default mainNavBar;

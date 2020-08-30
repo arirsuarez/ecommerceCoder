@@ -3,15 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 import MainNavBar from './Components/mainNavBar';
 import HomeContainer from './Components/Home';
+import Counter from './Components/Counter';
 
 
 function App() {
-  //Renderizando la app. Sólo se puede renderizar un elemento en este caso <div>
   return (
     <div>
       <MainNavBar />
       <div className="App">
-        <HomeContainer />
+        <HomeContainer name='Ariel Suarez'/>
+        <Counter ini='0' min='0' max='15'/>
       </div>
     </div>
   );

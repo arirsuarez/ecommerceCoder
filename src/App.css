@@ -42,11 +42,38 @@
   height: 50px;
 }
 
-p {
+span {
   background-color: #ccc;
   margin: auto;
   text-align: center;
   margin-top: 100px !important;
   font-weight: bolder;
   font-size: 50px;
+}
+
+.numberCircle {
+  display:inline-block;
+  margin: 10px;
+
+  border-radius:50%;
+  border:2px solid;
+
+  font-size:32px;
+}
+
+.numberCircle:before,
+.numberCircle:after {
+  content:'\200B';
+  display:inline-block;
+  line-height:0px;
+
+  padding-top:50%;
+  padding-bottom:50%;
+}
+
+.numberCircle:before {
+  padding-left:8px;
+}
+.numberCircle:after {
+  padding-right:8px;
 }
