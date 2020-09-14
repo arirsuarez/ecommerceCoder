@@ -77,3 +77,14 @@ span {
 .numberCircle:after {
   padding-right:8px;
 }
+
+.productCard {
+  display: inline;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 30px 30px 60px;
+  grid-template-columns: 5fr 2.5fr 2.5fr;
+  gap: 1px 2px;
+}

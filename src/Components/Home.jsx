@@ -1,10 +1,12 @@
 import React from 'react';
+import Item from './Item';
 
-
-function greetings(props) {
+function HomeContainer(props) {
     return (
-        <span>Welcome to {props.name} page!</span>
+        <>
+        <Item />
+        </>
     )
 }
 
-export default greetings;
+export default HomeContainer;
