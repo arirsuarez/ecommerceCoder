@@ -1,10 +1,10 @@
 import React from 'react';
-import ItemList from './ItemList';
+import ItemList from '../Components/Item/ItemList';
 
 function HomeContainer(props) {
     return (
         <>
-        <ItemList />
+            <ItemList />
         </>
     )
 }

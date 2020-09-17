@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button } from 'react-bootstrap';
-import Loading from './Loading';
+import { Card, Button, NavLink } from 'react-bootstrap';
+import Loading from '../Loading';
 import './Card.css';
 import Item from './Item';
+import ItemDetailContainer from './ItemDetailContainer';
 
 
 const ItemList = (props) => {
@@ -33,8 +34,8 @@ const ItemList = (props) => {
     return (
         <div className='Card'>
             {data.map((product, i) => (
-                <div key={{ i }}>
-                    <Item id={product.id} name={product.title} price={product.price} thumbnail={product.thumbnail} />
+                <div id={product.id}>
+                    <ItemDetailContainer id={product.id}><Item id={product.id} name={product.title} price={product.price} thumbnail={product.thumbnail} /></ItemDetailContainer>    
                 </div>))
             }
         </div>
