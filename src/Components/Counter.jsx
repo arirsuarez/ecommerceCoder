@@ -18,7 +18,7 @@ function Counter(props) {
     };
 
     let removeItem = () => {
-        if (counter == parseInt(props.min)) {
+        if (counter === parseInt(props.min)) {
             alert('No items added yet!');
         } else {
             setCounter((prevCounter) => {

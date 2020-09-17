@@ -1,12 +1,11 @@
 import React from 'react';
-import Item from './Item';
+import ItemList from './ItemList';
 
 function HomeContainer(props) {
     return (
         <>
-        <Item />
+        <ItemList />
         </>
     )
 }
-
 export default HomeContainer;

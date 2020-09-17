@@ -1,12 +1,45 @@
+import React, { useState, useEffect } from "react";
+import { Card, Button } from 'react-bootstrap';
+import Loading from './Loading';
+import './Card.css';
+import Item from './Item';
 
 
-function Data() {
-    return([
-        { id: '1', name: 'Producto 1', description: 'Esta es la descripción del producto número 1' },
-        { id: '2', name: 'Producto 2', description: 'Esta es la descripción del producto número 2' },
-        { id: '3', name: 'Producto 3', description: 'Esta es la descripción del producto número 3' },
-        { id: '4', name: 'Producto 4', description: 'Esta es la descripción del producto número 4' }
-    ])
+const ItemList = (props) => {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true);
+        fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1055&limit=15')
+            .then(response => {
+                return response.json();
+            })
+            .then(res => {
+                setData(res.results);
+                setLoading(false);
+            })
+
+    }, [])
+
+    useEffect(() => {
+        console.log(data);
+    }, [data])
+
+    if (loading) {
+        return <Loading />
+    }
+
+    return (
+        <div className='Card'>
+            {data.map((product, i) => (
+                <div key={{ i }}>
+                    <Item id={product.id} name={product.title} price={product.price} thumbnail={product.thumbnail} />
+                </div>))
+            }
+        </div>
+    );
 }
 
-export default Data;
+
+export default ItemList;
