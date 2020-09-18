@@ -6,7 +6,7 @@ import Item from './Item';
 import ItemDetailContainer from './ItemDetailContainer';
 
 
-const ItemList = (props) => {
+const ItemList = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -33,11 +33,7 @@ const ItemList = (props) => {
 
     return (
         <div className='Card'>
-            {data.map((product, i) => (
-                <div id={product.id}>
-                    <ItemDetailContainer id={product.id}><Item id={product.id} name={product.title} price={product.price} thumbnail={product.thumbnail} /></ItemDetailContainer>    
-                </div>))
-            }
+            <Item products={data} />
         </div>
     );
 }

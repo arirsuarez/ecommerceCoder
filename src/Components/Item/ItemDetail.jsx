@@ -1,22 +1,19 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
-function ItemDetail(props) {
+function ItemDetail({ product, handleClick }) {
     return (
-        <Carousel>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={props.thumbnail}
-                    alt={props.title}
-                />
-                <Carousel.Caption>
-                    <h3>{props.title}</h3>
-                    <p>{props.price}</p>
-                    <a href={props.permalink}>{props.title}</a>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
+        <div className='product'> 
+          <Card style={{ width: '18rem' }} id={product.id}>
+              <Card.Img src={product.thumbnail} variant="top" alt="Product" />
+              <Card.Body>
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Text>${product.price}
+                  </Card.Text>
+                  <Button variant="primary" onClick={handleClick}>Add To Cart</Button>
+              </Card.Body>
+          </Card>
+        </div>
     )
 }
 

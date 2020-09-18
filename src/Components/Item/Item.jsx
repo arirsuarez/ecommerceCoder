@@ -1,20 +1,13 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
 import './Card.css';
+import ItemDetailContainer from './ItemDetailContainer';
 
-function Item(props) {
+function Item({ products }) {
     return (
-        <div className='product'> 
-            <Card style={{ width: '18rem' }} id={props.id}>
-                <Card.Img src={props.thumbnail} variant="top" alt="Product" />
-                <Card.Body>
-                    <Card.Title>{props.name}</Card.Title>
-                    <Card.Text>${props.price}
-                    </Card.Text>
-                    <Button variant="primary">Add To Cart</Button>
-                </Card.Body>
-            </Card>
-        </div>
+        products.map((product) => (
+            <ItemDetailContainer key={product.id} product={product} />
+        ))
+
     )
 }
 
