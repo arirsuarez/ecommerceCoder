@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, NavLink } from 'react-bootstrap';
 import Loading from '../Loading';
 import './Card.css';
 import Item from './Item';
-import ItemDetailContainer from './ItemDetailContainer';
 
 
 const ItemList = () => {
