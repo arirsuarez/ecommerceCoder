@@ -28,7 +28,13 @@ function Counter(props) {
     }
 
     return (
-            <span className="numberCircle">{counter}</span>        
+        <>
+            
+            <button onClick={removeItem}>Remove Item</button>  
+            <span className="numberCircle">{counter}</span>  
+            <button onClick={addtoCart}>Add To Cart</button>
+            
+            </>    
     );
 }
 

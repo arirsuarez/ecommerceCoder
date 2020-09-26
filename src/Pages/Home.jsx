@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
-import InProduct from '../Components/Item/InProduct';
-import ItemList from '../Components/Item/ItemList';
+import Loading from '../Components/Loading';
+import Item from '../Components/Item/Item';
 
-function HomeContainer() {
+const Home = (props) => {
+
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setLoading(true);
+        fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1055&limit=15')
+            .then(response => {
+                return response.json();
+            })
+            .then(res => {
+                setData(res.results);
+                setLoading(false);
+            })
+
+    }, [props.data]);
+
     return (
         <>
-            <ItemList />
+        { loading ? <Loading /> : <Item products={data} /> }
         </>
     )
+    // return (
+    //     <>
+    //         <ItemList />
+    //     </>
+    // )
 }
-export default HomeContainer;
+export default Home;
