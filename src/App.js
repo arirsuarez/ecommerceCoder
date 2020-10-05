@@ -8,6 +8,7 @@ import Contact from './Pages/Contact';
 import Location from './Pages/Location';
 import InProduct from './Components/Item/InProduct';
 import Cart from './Pages/Cart';
+import { CartProvider } from './Context/cartContext';
 
 
 
@@ -17,25 +18,27 @@ function App() {
       <Router>
 
         <MainNavBar />
+        <CartProvider>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Shipping">
+            <Shipping />
+          </Route>
+          <Route path="/Contact">
+            <Contact />
+          </Route>
+          <Route path="/Location">
+            <Location />
+          </Route>
 
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/Shipping">
-          <Shipping />
-        </Route>
-        <Route path="/Contact">
-          <Contact />
-        </Route>
-        <Route path="/Location">
-          <Location />
-        </Route>
-        <Route path='/InProduct/:id'>
-          <InProduct />
-        </Route>
-        <Route path='/Cart'>
-          <Cart />
-        </Route>
+          <Route path='/InProduct/:id'>
+            <InProduct />
+          </Route>
+          <Route path='/Cart'>
+            <Cart />
+          </Route>
+        </CartProvider>
       </Router>
     </>
   );

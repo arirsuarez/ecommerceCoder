@@ -3,7 +3,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import style from 'bootstrap/dist/css/bootstrap.css';
 import CartIcon from './CartIcon';
-
+import './Item/Card.css';
 
 class mainNavBar extends React.Component {
     render() {

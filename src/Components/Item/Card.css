@@ -7,3 +7,34 @@ div {
     display: inline-block;
     text-align: center;
 }
+
+.inProduct {
+    display: block;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    overflow-x: auto;
+    width: 100%;
+}
+
+img.d-block.w-100 {
+    align-self: center;
+}
+
+.Nav {
+    width: 100%;
+}
+
+.toCart{
+  background: rgb(55, 197, 55);
+  border: 1px solid gray;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 380px;
+  margin-top: 5px;
+}

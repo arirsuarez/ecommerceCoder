@@ -51,33 +51,6 @@ span {
   font-size: 50px;
 }
 
-.numberCircle {
-  display:inline-block;
-  margin: 10px;
-
-  border-radius:50%;
-  border:2px solid;
-
-  font-size:32px;
-}
-
-.numberCircle:before,
-.numberCircle:after {
-  content:'\200B';
-  display:inline-block;
-  line-height:0px;
-
-  padding-top:50%;
-  padding-bottom:50%;
-}
-
-.numberCircle:before {
-  padding-left:8px;
-}
-.numberCircle:after {
-  padding-right:8px;
-}
-
 .productCard {
   display: inline;
 }
@@ -88,3 +61,14 @@ span {
   grid-template-columns: 5fr 2.5fr 2.5fr;
   gap: 1px 2px;
 }
+
+img.rounded {
+  width: 150px;
+  height: 150px;
+  display: inline;
+}
+
+.navbar {
+  width: 1920px !important;
+}
+

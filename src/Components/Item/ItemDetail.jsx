@@ -1,8 +1,6 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { LinkContainer } from "react-router-bootstrap";
-import InProduct from './InProduct';
 
 function ItemDetail({ product }) {
     return (
@@ -15,7 +13,6 @@ function ItemDetail({ product }) {
                             <Card.Title>{product.title}</Card.Title>
                             <Card.Text>${product.price}
                             </Card.Text>
-                            <Button variant="primary">Add To Cart</Button>
                         </Card.Body>
                     </Card>
                 </NavLink>               
