@@ -19,8 +19,8 @@ class mainNavBar extends React.Component {
                             <LinkContainer to='/Shipping'>
                                 <Nav.Link>Envíos</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to='/Contact'>
-                                <Nav.Link>Contacto</Nav.Link>
+                            <LinkContainer to='/InCategory/:id'>
+                                <Nav.Link>Categoria</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to='/Location'>
                                 <Nav.Link>Ubicación</Nav.Link>

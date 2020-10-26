@@ -5,6 +5,7 @@ import '../App.css';
 import { CartContext } from '../Context/cartContext';
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import CheckOutForm from '../Components/CheckOutForm';
 
 function Cart() {
     const [cart] = useContext(CartContext);
@@ -23,6 +24,8 @@ function Cart() {
                     </Col>
                 </Row>
             </Container>}
+
+            <CheckOutForm />
 
 
         </>
